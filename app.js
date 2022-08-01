@@ -73,7 +73,7 @@ function getTask() {
     for (let i = 0; i < lettersArr.length; i++) {
       let letter = lettersArr[i];
       mapLettersAndRegex.get(letter);
-      wordRegexArr.unshift(mapLettersAndRegex.get(letter));
+      wordRegexArr.push(mapLettersAndRegex.get(letter));
     }
     let wordRegex = wordRegexArr.toString().replaceAll(',', '][');
     wordRegex = '[' + wordRegex + ']';
